@@ -12,6 +12,7 @@
           db: {
                 connectionLimit: 400,
                 host: 'localhost',
+                port:'3307',
                 user: 'root',
                 password: '',
                 database: 'service_backend',
@@ -26,7 +27,7 @@
 
           },
           apiurl: {
-                SERVERSIDE_BASE_URL: 'http://localhost:9001/',
+                SERVERSIDE_BASE_URL: 'http:/34.238.249.32:9001/',
           },
     },
     prod: {
@@ -34,6 +35,7 @@
           db: {
                 connectionLimit: 400,
                 host: '127.0.0.1',
+                post:'3307',
                 user: 'root',
                 password: '',
                 database: 'OKR',

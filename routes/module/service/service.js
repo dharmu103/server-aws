@@ -10,6 +10,10 @@ module.exports.getServiceByLimit = (req,res)=>{
                 message: "internal server error 1",
             });
         } 
+    // con.connect((err)  =>{
+    //   if(err){
+    //     console.log("Database Error ``")
+    // }
         else {
            const get_service_query = `SELECT service_id,title,description,price,service_img,avg_rating,total_rating,extra,type,service_name from service where is_active=1 and service_name='${req.body.service_name}' limit ${req.body.limit}`;
             connection.query(get_service_query, function(err, rows, fields) {

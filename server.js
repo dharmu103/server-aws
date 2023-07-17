@@ -12,7 +12,8 @@ app.use(cors())
 app.get('/regis', function (req, res) {
     res.send('<h3>I am OKR register backend! Running fine........</h3>');
 });
-
+// app.use(express.static('public'));
+ app.use('/uploads', express.static('uploads'));
 
 require('./routes/index')(app);
 
@@ -40,3 +41,37 @@ app.use(function (err, req, res, next) {
         },
     });
 });
+
+// const mysql =require('mysql');
+
+// const con =  mysql.createConnection({
+//     host:'localhost',
+//     port: '3307',
+//     user:'root',
+//     password: ''
+// }) 
+
+// con.connect((err)=>{
+//     if(err){
+//         console.log(err);
+//     }
+// console.log("Running");
+// });
+
+// var mysql = require('mysql');
+// var pool  = mysql.createPool({
+//   connectionLimit : 10,
+//   host     : 'localhost',
+//   port:'3307',
+//   user     : 'root',
+//   password : '',
+//   database : 'db',
+// });
+
+// pool.getConnection((err)=>{
+//     if(err){
+//         console.log(err);
+//     }
+//     console.log("Running");
+   
+// })
