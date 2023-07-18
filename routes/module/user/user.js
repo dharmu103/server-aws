@@ -9,7 +9,7 @@ module.exports.registerUser = (req,res,next)=>{
     const postReq = {
         name:req.body.name,
         gender:req.body.gender,
-        photo:config.dev.apiurl.SERVERSIDE_BASE_URL+ req.file.filename,
+        photo: req.file.filename,
         is_active:1,
         created_by:req.body.created_by,
     }

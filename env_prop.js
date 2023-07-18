@@ -15,7 +15,7 @@
                 port:'3307',
                 user: 'root',
                 password: '',
-                database: 'service_backend',
+                database: 'db',
                 timezone: 'Z'
           },
           redis: {
@@ -27,7 +27,7 @@
 
           },
           apiurl: {
-                SERVERSIDE_BASE_URL: 'http:/34.238.249.32:9001/',
+                SERVERSIDE_BASE_URL: 'http://localhost:9001/',
           },
     },
     prod: {
