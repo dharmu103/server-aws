@@ -1,3 +1,4 @@
+const config = require('../../../env_prop');
 const commonRouter = require('../../commonRouter')
 
 
@@ -13,7 +14,7 @@ module.exports.postInvite = (req,res,next)=>{
         title:req.body.title,
         description:req.body.description,
         reffer_code:req.body.reffer_code,
-        invite_img:req.file.path,
+        invite_img:config.dev.apiurl.SERVERSIDE_BASE_URL+ req.file.path,
         is_active:1,
         created_by:req.body.created_by
     }

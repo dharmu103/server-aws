@@ -27,7 +27,7 @@
 
           },
           apiurl: {
-                SERVERSIDE_BASE_URL: 'http://localhost:9001/',
+                SERVERSIDE_BASE_URL: 'http://16.171.144.172:9001//',
           },
     },
     prod: {
@@ -35,7 +35,7 @@
           db: {
                 connectionLimit: 400,
                 host: '127.0.0.1',
-                post:'3307',
+                post:'3306',
                 user: 'root',
                 password: '',
                 database: 'OKR',

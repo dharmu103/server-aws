@@ -1,3 +1,4 @@
+const config = require('../../../env_prop');
 const commonRouter = require('../../commonRouter')
 
 
@@ -13,7 +14,7 @@ module.exports.postAnnouncement = (req,res)=>{
         title:req.body.title,
         description:req.body.description,
         service_id:req.body.service_id,
-        announcement_img:req.file.path,
+        announcement_img: config.dev.apiurl.SERVERSIDE_BASE_URL+ req.file.path,
         is_active:1,
         created_by:req.body.created_by
     }

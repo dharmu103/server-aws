@@ -1,3 +1,4 @@
+const config = require('../../../env_prop');
 const commonRouter = require('../../commonRouter')
 
 
@@ -6,7 +7,7 @@ module.exports.registerPartner = (req,res)=>{
 
     const postReq = {
         name:req.body.name,
-        photo:req.file.path,
+        photo: config.dev.apiurl.SERVERSIDE_BASE_URL+  req.file.path,
         mobile:req.body.mobile,
         email:req.body.email,
         password:req.body.password,

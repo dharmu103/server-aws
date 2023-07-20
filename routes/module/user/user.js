@@ -9,7 +9,7 @@ module.exports.registerUser = (req,res,next)=>{
     const postReq = {
         name:req.body.name,
         gender:req.body.gender,
-        photo: req.file.filename,
+        photo:config.dev.apiurl.SERVERSIDE_BASE_URL+ "uploads/"+ req.file.filename,
         is_active:1,
         created_by:req.body.created_by,
     }
@@ -65,7 +65,7 @@ module.exports.getMyProfile = (req,res)=>{
     }
 
     console.log(req.body);
-
+    console.log("ye ");
     commonRouter.mysql_pool.getConnection((connectionErr, connection) => {
         if (connectionErr) {
             console.log("inn error 1");
